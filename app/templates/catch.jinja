@@ -1,0 +1,27 @@
+{% extends "base.jinja" %}
+
+
+{% block content %}
+<h2>Catch Pokemon!</h2>
+<div class="card-group">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{data['sprites']['front_default']}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{data['name'].title()}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: {{data['id']}}</li>
+            <li class="list-group-item">Weight: {{data['weight']}}</li>
+            <li class="list-group-item">Height: {{data['height']}}</li>
+        </ul>
+    </div>
+</div>
+<form action="" method="post">
+    {{form.hidden_tag()}}
+    <p>
+    {{form.submit(class='btn btn-primary')}}
+    </p>
+    </form>
+{% endblock %}

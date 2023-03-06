@@ -1,0 +1,15 @@
+{% extends "base.jinja" %}
+
+{% block content %}
+    <h2>Post Page</h2>
+    <form action="url_for('social.post')" method="post">
+    {{form.hidden_tag()}}
+    <p>
+    {{form.body.label}}<br>
+    {{form.body(size=32)}}
+    </p>
+    <p>
+    {{form.submit(class='btn btn-primary')}}
+    </p>
+    </form>
+{%endblock%}
